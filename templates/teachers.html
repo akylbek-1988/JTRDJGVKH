@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>Teachers</span>
+        <h3>Meet the instructors shaping your education.</h3>
+    </div>
+    <div class="teacher-grid">
+        {% for teacher in teachers %}
+        <article class="teacher-card">
+            <div class="teacher-avatar" style="background-image:url('{{ url_for('static', filename='images/placeholder.svg') }}')"></div>
+            <h4>{{ teacher.name }}</h4>
+            <p class="teacher-position">{{ teacher.position }}</p>
+            <p>{{ teacher.specialization }}</p>
+            <p>{{ teacher.bio }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

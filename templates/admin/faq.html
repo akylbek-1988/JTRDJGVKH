@@ -1,0 +1,27 @@
+{% extends 'admin/admin_base.html' %}
+{% block admin_content %}
+<h2>FAQ</h2>
+<div class="admin-form-card">
+    <h3>Add FAQ item</h3>
+    <form method="POST" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+        <label>Question</label>
+        <input type="text" name="question" required />
+        <label>Answer</label>
+        <textarea name="answer" rows="4" required></textarea>
+        <button type="submit" class="button button-primary">Add FAQ</button>
+    </form>
+</div>
+<table class="admin-table">
+    <thead><tr><th>ID</th><th>Question</th><th>Action</th></tr></thead>
+    <tbody>
+        {% for item in faq_list %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.question }}</td>
+            <td><a href="?delete={{ item.id }}" class="button button-secondary">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

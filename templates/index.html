@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+    <div class="hero-decor"></div>
+    <div class="container hero-grid">
+        <div class="hero-copy">
+            <span class="eyebrow">Заманбап ислам билим берүү</span>
+            <h2>Зулкарнайн Медресе</h2>
+            <p>Билим. Адамдык сапат. Ыймандуулук. Биз руханий жана академиялык билимди бириктиребиз.</p>
+            <div class="hero-actions">
+                <a href="/admission" class="button button-primary">Apply for Admission</a>
+                <a href="/about" class="button button-secondary">About the Madrasah</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="poster-card">
+                <div class="poster-content">
+                    <span>Зулкарнайн Медресе</span>
+                    <h3>Билим жана руханий өсүш үчүн</h3>
+                    <p>Сизди диний билимге, адепке жана заманбап компетенцияга даярдай турган премиум программа.</p>
+                </div>
+                <div class="poster-graphic"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-preview container">
+    <div class="section-header">
+        <span>About the Madrasah</span>
+        <h3>Our mission is to shape modern leaders guided by Islamic values.</h3>
+    </div>
+    <div class="about-grid">
+        <article>
+            <h4>Mission</h4>
+            <p>Студенттерди ислам ганаатка жана коомдук жоопкерчиликке үйрөтүү.</p>
+        </article>
+        <article>
+            <h4>Vision</h4>
+            <p>Руханий жана академиялык тарбия менен өзүнө болгон ишенимдүү келечек.</p>
+        </article>
+        <article>
+            <h4>Values</h4>
+            <p>Ийман, адеп, сый-урмат жана чынчылдык бардык ишибизде.</p>
+        </article>
+    </div>
+</section>
+
+<section class="statistics container">
+    <div class="section-header">
+        <span>Strength in Numbers</span>
+        <h3>Учурдагы көрсөткүчтөр жана билим сапаты.</h3>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card"><strong>{{ statistics.students }}</strong><span>Students</span></div>
+        <div class="stat-card"><strong>{{ statistics.teachers }}</strong><span>Teachers</span></div>
+        <div class="stat-card"><strong>{{ statistics.graduates }}</strong><span>Graduates</span></div>
+        <div class="stat-card"><strong>{{ statistics.programs }}</strong><span>Programs</span></div>
+    </div>
+</section>
+
+<section class="programs container">
+    <div class="section-header">
+        <span>Educational Programs</span>
+        <h3>10 comprehensive programs for your spiritual and academic growth.</h3>
+    </div>
+    <div class="program-grid">
+        {% for course in courses %}
+        <article class="program-card">
+            <h4>{{ course.title }}</h4>
+            <p>{{ course.description }}</p>
+            <div class="program-meta">
+                <span>{{ course.teacher }}</span>
+                <span>{{ course.duration }}</span>
+            </div>
+            <a href="/courses/{{ course.id }}" class="button button-link">View Details</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="teachers-preview container">
+    <div class="section-header">
+        <span>Teachers</span>
+        <h3>Experienced instructors guiding every student.</h3>
+    </div>
+    <div class="teacher-grid">
+        {% for teacher in teachers %}
+        <article class="teacher-card">
+            <div class="teacher-avatar" style="background-image:url('{{ url_for('static', filename='images/placeholder.svg') }}');"></div>
+            <h4>{{ teacher.name }}</h4>
+            <p class="teacher-position">{{ teacher.position }}</p>
+            <p>{{ teacher.specialization }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="student-area container">
+    <div class="section-header">
+        <span>Student Area</span>
+        <h3>A modern learning experience with clear academic support.</h3>
+    </div>
+    <div class="student-grid">
+        <div><h4>Class Schedule</h4><p>Weekly timetable for spiritual and academic sessions.</p></div>
+        <div><h4>Lessons</h4><p>Interactive lectures, small groups and mentoring.</p></div>
+        <div><h4>Exams</h4><p>Performance monitoring with clear growth plans.</p></div>
+        <div><h4>Announcements</h4><p>Important news and updates delivered on time.</p></div>
+        <div><h4>Events</h4><p>Community events and prayer gatherings.</p></div>
+        <div><h4>Digital Library</h4><p>Online access to books, lectures and study resources.</p></div>
+    </div>
+</section>
+
+<section class="admission-preview container">
+    <div class="section-header">
+        <span>Admission</span>
+        <h3>Submit your application and join the next intake.</h3>
+    </div>
+    <div class="admission-callout">
+        <div>
+            <h4>Start your journey today</h4>
+            <p>Fill out the online form and our admissions team will contact you with next steps.</p>
+            <a href="/admission" class="button button-primary">Apply Now</a>
+        </div>
+        <div class="admission-quick">
+            <div><strong>Phone</strong><span>{{ site_info.phone }}</span></div>
+            <div><strong>Email</strong><span>{{ site_info.email }}</span></div>
+            <div><strong>Address</strong><span>{{ site_info.address }}</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="news-preview container">
+    <div class="section-header">
+        <span>Latest News</span>
+        <h3>Stay informed about training, events and community updates.</h3>
+    </div>
+    <div class="news-grid">
+        {% for item in news_list %}
+        <article class="news-card">
+            <div class="news-image" style="background-image:url('{{ url_for('static', filename='images/placeholder.svg') }}')"></div>
+            <div class="news-copy">
+                <span>{{ item.category }}</span>
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.excerpt }}</p>
+                <div class="news-meta">{{ item.date }} • {{ item.author }}</div>
+                <a href="/news/{{ item.id }}" class="button button-link">Read more</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="events-preview container">
+    <div class="section-header">
+        <span>Upcoming Events</span>
+        <h3>Community gatherings, lectures and celebrations.</h3>
+    </div>
+    <div class="event-grid">
+        {% for event in events %}
+        <article class="event-card">
+            <div><strong>{{ event.date }}</strong> <span>{{ event.time }}</span></div>
+            <h4>{{ event.title }}</h4>
+            <p>{{ event.location }}</p>
+            <p>{{ event.description }}</p>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="gallery-preview container">
+    <div class="section-header">
+        <span>Photo Gallery</span>
+        <h3>Moments from classes, events and daily life.</h3>
+    </div>
+    <div class="gallery-grid">
+        {% for image in gallery %}
+        <div class="gallery-card" style="background-image:url('{{ url_for('static', filename='images/placeholder.svg') }}')">
+            <span>{{ image.category }}</span>
+            <h5>{{ image.title }}</h5>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="library-preview container">
+    <div class="section-header">
+        <span>Digital Library</span>
+        <h3>Accessible books and resources for students.</h3>
+    </div>
+    <div class="library-grid">
+        {% for book in books %}
+        <article class="book-card">
+            <div class="book-cover"></div>
+            <div>
+                <h4>{{ book.title }}</h4>
+                <small>{{ book.author }} • {{ book.category }}</small>
+                <p>{{ book.description }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="faq-preview container">
+    <div class="section-header">
+        <span>FAQ</span>
+        <h3>Common questions about admission and study.</h3>
+    </div>
+    <div class="faq-list">
+        {% for item in faq_list %}
+        <details>
+            <summary>{{ item.question }}</summary>
+            <p>{{ item.answer }}</p>
+        </details>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

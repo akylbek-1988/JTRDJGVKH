@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <article class="detail-article">
+        <div class="section-header">
+            <span>{{ item.category }}</span>
+            <h3>{{ item.title }}</h3>
+            <p class="news-meta">{{ item.date }} • {{ item.author }}</p>
+        </div>
+        <div class="article-body">
+            <p>{{ item.content }}</p>
+        </div>
+        <a href="/news" class="button button-secondary">Back to News</a>
+    </article>
+</section>
+{% endblock %}

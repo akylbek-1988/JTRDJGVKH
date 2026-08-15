@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>Book Details</span>
+        <h3>{{ book.title }}</h3>
+    </div>
+    <div class="course-detail-card">
+        <div>
+            <p>{{ book.description }}</p>
+            <ul class="course-details">
+                <li><strong>Author:</strong> {{ book.author }}</li>
+                <li><strong>Category:</strong> {{ book.category }}</li>
+            </ul>
+            {% if book.pdf %}
+            <a href="{{ url_for('uploaded_file', filename=book.pdf) }}" class="button button-primary" target="_blank">Download PDF</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

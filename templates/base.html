@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_title or site_info.name }} | {{ site_info.slogan }}</title>
+    <meta name="description" content="{{ site_info.name }} - Ислам билим берүү академиясы, заманбап маданият менен руханий баалуулуктарды бириктирет." />
+    <meta name="keywords" content="Ислам медресеси, Zulkarnaim, билим, Куран, тажвид, фикһ, араб тили" />
+    <meta property="og:title" content="{{ site_info.name }}" />
+    <meta property="og:description" content="Заманбап, профессионалдык ислам билим берүү мекемеси Кыргызстанда." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/logo.svg') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body class="theme-light">
+    <header class="page-header">
+        <div class="top-bar container">
+            <div class="brand">
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="{{ site_info.name }} logo" class="brand-logo" />
+                <div>
+                    <h1>{{ site_info.name }}</h1>
+                    <p>{{ site_info.slogan }}</p>
+                </div>
+            </div>
+            <div class="top-actions">
+                <div class="language-switcher" id="languageSwitcher">
+                    <button type="button" data-lang="ky" class="lang-button active">KG</button>
+                    <button type="button" data-lang="ru" class="lang-button">RU</button>
+                    <button type="button" data-lang="ar" class="lang-button">AR</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle">☀</button>
+            </div>
+        </div>
+        <nav class="main-nav container">
+            <a href="/" class="nav-logo">{{ site_info.name }}</a>
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/courses">Programs</a></li>
+                <li><a href="/teachers">Teachers</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/admission">Admission</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>{{ site_info.name }}</h3>
+                <p>{{ site_info.description }}</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>{{ site_info.phone }}</p>
+                <p>{{ site_info.email }}</p>
+                <p>{{ site_info.address }}</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/courses">Programs</a></li>
+                    <li><a href="/admission">Admission</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bar container">
+            <p>&copy; {{ now_year }} {{ site_info.name }}. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

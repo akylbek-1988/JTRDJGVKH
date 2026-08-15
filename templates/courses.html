@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>Programs</span>
+        <h3>Our courses are designed for faith and modern life.</h3>
+    </div>
+    <div class="program-grid">
+        {% for course in courses %}
+        <article class="program-card">
+            <h4>{{ course.title }}</h4>
+            <p>{{ course.description }}</p>
+            <div class="program-meta">
+                <span>{{ course.teacher }}</span>
+                <span>{{ course.duration }}</span>
+            </div>
+            <a href="/courses/{{ course.id }}" class="button button-link">View course</a>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

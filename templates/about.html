@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>About Us</span>
+        <h3>Зулкарнайн Медресеси жөнүндө</h3>
+    </div>
+    <div class="about-grid">
+        <article>
+            <h4>About Us</h4>
+            <p>Биз — руханий баалуулуктарга жана заманбап билимге басым жасаган ислам билим берүү мекемеси.</p>
+        </article>
+        <article>
+            <h4>History</h4>
+            <p>Медресебиз 2018-жылдан бери билим, адеп жана коомдук кызматтуулукта алдынкы ролду ойнойт.</p>
+        </article>
+        <article>
+            <h4>Mission</h4>
+            <p>Студенттерди билимдүү, адептүү жана коомго пайдалуу инсан кылып тарбиялоо.</p>
+        </article>
+        <article>
+            <h4>Vision</h4>
+            <p>Ислам маданияты менен заманбап билимдин айкалышында дүйнөгө таасир этүүчү лидерлерди даярдоо.</p>
+        </article>
+        <article>
+            <h4>Goals</h4>
+            <p>Куран окутуу, тил үйрөнүү, лидерлик сапаттарды калыптандыруу жана дисциплинаны шыктандыруу.</p>
+        </article>
+        <article>
+            <h4>Values</h4>
+            <p>Ыйман, адеп, жоопкерчилик жана кайрымдуулук биздин негизги баалуулуктар.</p>
+        </article>
+    </div>
+</section>
+
+<section class="statistics container">
+    <div class="section-header">
+        <span>Our Impact</span>
+        <h3>Көрсөткүчтөрүбүздүн жана артыкчылыктарыбыздын айкалышы.</h3>
+    </div>
+    <div class="stats-grid">
+        <div class="stat-card"><strong>{{ statistics.students }}</strong><span>Students</span></div>
+        <div class="stat-card"><strong>{{ statistics.teachers }}</strong><span>Teachers</span></div>
+        <div class="stat-card"><strong>{{ statistics.graduates }}</strong><span>Graduates</span></div>
+        <div class="stat-card"><strong>{{ statistics.programs }}</strong><span>Programs</span></div>
+    </div>
+</section>
+{% endblock %}

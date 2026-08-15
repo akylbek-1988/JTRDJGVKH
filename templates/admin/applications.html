@@ -1,0 +1,26 @@
+{% extends 'admin/admin_base.html' %}
+{% block admin_content %}
+<h2>Applications</h2>
+<table class="admin-table">
+    <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Email</th><th>Program</th><th>Submitted</th><th>Action</th></tr></thead>
+    <tbody>
+        {% for application in applications %}
+        <tr>
+            <td>{{ application.id }}</td>
+            <td>{{ application.full_name }}</td>
+            <td>{{ application.phone }}</td>
+            <td>{{ application.email }}</td>
+            <td>{{ application.program }}</td>
+            <td>{{ application.submitted_at }}</td>
+            <td>
+                <form method="POST" style="display:inline;">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                    <input type="hidden" name="delete_id" value="{{ application.id }}" />
+                    <button type="submit" class="button button-secondary">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

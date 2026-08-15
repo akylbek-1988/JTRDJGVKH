@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>Program Details</span>
+        <h3>{{ course.title }}</h3>
+    </div>
+    <div class="course-detail-card">
+        <div>
+            <p>{{ course.description }}</p>
+            <ul class="course-details">
+                <li><strong>Teacher:</strong> {{ course.teacher }}</li>
+                <li><strong>Duration:</strong> {{ course.duration }}</li>
+                <li><strong>Subjects:</strong> {{ course.subjects }}</li>
+                <li><strong>Curriculum:</strong> {{ course.curriculum }}</li>
+            </ul>
+            <a href="/admission" class="button button-primary">Apply for this course</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

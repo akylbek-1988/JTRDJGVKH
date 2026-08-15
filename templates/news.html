@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>News</span>
+        <h3>Latest stories and announcements from the Madrasah.</h3>
+    </div>
+    <form class="search-bar" method="GET">
+        <input type="text" name="search" placeholder="Search news" value="{{ search }}" />
+        <select name="category">
+            <option value="">All categories</option>
+            {% for cat in categories %}
+            <option value="{{ cat }}" {% if selected_category == cat %}selected{% endif %}>{{ cat }}</option>
+            {% endfor %}
+        </select>
+        <button class="button button-secondary">Search</button>
+    </form>
+    <div class="news-grid">
+        {% for item in news_list %}
+        <article class="news-card">
+            <div class="news-image" style="background-image:url('{{ url_for('static', filename='images/placeholder.svg') }}')"></div>
+            <div class="news-copy">
+                <span>{{ item.category }}</span>
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.excerpt }}</p>
+                <div class="news-meta">{{ item.date }} • {{ item.author }}</div>
+                <a href="/news/{{ item.id }}" class="button button-link">Read more</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

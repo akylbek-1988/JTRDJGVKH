@@ -1,0 +1,1152 @@
+Checking the existing workspace files to safely update the homepage.
+
+Read [](file:///c%3A/Users/user/Desktop/4-papka)
+
+Gathering the existing index.html content to replace it cleanly with the new single-file website.
+
+Read [](file:///c%3A/Users/user/Desktop/4-papka/index.html)
+
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Зулкарнайн Мадраса | Knowledge. Character. Faith.</title>
+<meta name="description" content="Зулкарнайн Мадраса is a premium Islamic educational institution in Bishkek offering Quran, Arabic, Hadith, Fiqh, and modern academic programs.">
+<meta name="keywords" content="madrasah, Islamic education, Quran, Arabic, Kyrgyzstan, Bishkek, admission, teachers, programs">
+<meta property="og:title" content="Зулкарнайн Мадраса">
+<meta property="og:description" content="Premium Islamic education with a focus on knowledge, character, and faith. Admissions open in Bishkek, Kyrgyzstan.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%2314220b'/%3E%3Ctext x='50%25' y='50%25' fill='%23d4af37' font-family='Segoe UI, sans-serif' font-size='48' text-anchor='middle' dominant-baseline='middle'%3EZulkarnaim%20Madrasah%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23102211'/><path d='M50 20 L70 40 A20 20 0 0 1 50 80 A20 20 0 0 1 30 40 Z' fill='%23d4af37'/><circle cx='50' cy='34' r='6' fill='white'/></svg>">
+<style>
+:root {
+  --bg: #0f1f14;
+  --surface: rgba(255,255,255,0.08);
+  --surface-strong: rgba(255,255,255,0.12);
+  --border: rgba(255,255,255,0.12);
+  --text: #f4f2ee;
+  --muted: #c8c5be;
+  --gold: #d4af37;
+  --emerald: #1d7a55;
+  --green: #163e2f;
+  --cream: #f7f1e7;
+  --shadow: 0 20px 60px rgba(0,0,0,0.25);
+  --radius: 28px;
+  scroll-behavior: smooth;
+}
+html, body { margin:0; padding:0; font-family:'Inter', system-ui, sans-serif; background: radial-gradient(circle at top, rgba(212,175,55,0.08), transparent 35%), linear-gradient(180deg, #09110d 0%, #0d1b14 100%); color: var(--text); min-height:100%; }
+* { box-sizing:border-box; }
+button, input, select, textarea { font: inherit; }
+body.dark { --bg:#07100c; --surface:rgba(255,255,255,0.06); --surface-strong:rgba(255,255,255,0.08); --text:#f8f6f0; --muted:#b8b5ae; }
+body.light { --bg:#f9f5ee; --surface:rgba(255,255,255,0.72); --surface-strong:rgba(255,255,255,0.88); --text:#132116; --muted:#5c6b5f; background: #f7efe4; }
+body { background-color: var(--bg); transition: background 0.4s ease, color 0.4s ease; }
+main { width:min(1200px,calc(100% - 40px)); margin:0 auto; padding-top:120px; }
+header { position:fixed; inset:0 0 auto; z-index:100; background:rgba(7,17,12,0.82); backdrop-filter: blur(14px); border-bottom:1px solid rgba(255,255,255,0.08); }
+body.light header { background:rgba(255,255,255,0.88); border-color:rgba(0,0,0,0.08); }
+.navbar { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:18px 20px; gap:1rem; }
+.brand { display:flex; align-items:center; gap:0.9rem; color:var(--text); font-weight:700; letter-spacing:0.02em; font-size:1.05rem; }
+.brand span { font-size:1.4rem; line-height:1; }
+.nav-links { display:flex; align-items:center; gap:1.2rem; flex-wrap:wrap; }
+.nav-links a { color:var(--text); text-decoration:none; font-size:0.95rem; position:relative; transition:color 0.25s ease; }
+.nav-links a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:var(--gold); transition:width 0.25s ease; }
+.nav-links a:hover, .nav-links a.active { color:var(--gold); }
+.nav-links a:hover::after, .nav-links a.active::after { width:100%; }
+.controls { display:flex; align-items:center; gap:0.75rem; }
+.select-wrap { position:relative; }
+.select-wrap select { appearance:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); color:var(--text); padding:0.75rem 1.1rem 0.75rem 0.8rem; border-radius:999px; min-width:110px; cursor:pointer; }
+body.light .select-wrap select { background:rgba(17,24,19,0.06); color:#1a2b20; }
+.theme-toggle { width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.08); display:grid; place-items:center; cursor:pointer; transition:transform 0.2s ease; }
+.theme-toggle:hover { transform:scale(1.03); }
+.menu-toggle { display:none; width:46px; height:46px; border-radius:18px; border:1px solid rgba(255,255,255,0.14); background:rgba(255,255,255,0.08); color:var(--text); cursor:pointer; }
+.hero { display:grid; grid-template-columns:1.1fr 0.9fr; align-items:center; gap:3rem; min-height:calc(100vh - 120px); padding:100px 0 60px; }
+.hero-content { max-width:620px; }
+.hero-title { font-size:3.6rem; line-height:1.02; letter-spacing:-0.05em; margin:0 0 1rem; color:var(--text); }
+.hero-subtitle { font-size:1.1rem; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:0.3em; margin-bottom:1.2rem; }
+.hero-desc { font-size:1rem; line-height:1.85; color:var(--muted); margin-bottom:1.8rem; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:1rem; }
+.btn { display:inline-flex; align-items:center; justify-content:center; padding:1rem 1.8rem; border-radius:999px; border:1px solid transparent; transition:transform 0.25s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease; cursor:pointer; text-decoration:none; font-weight:600; }
+.btn-primary { background:linear-gradient(135deg,var(--gold),#f5c754); color:#10210d; box-shadow:0 20px 35px rgba(212,175,55,0.25); }
+.btn-secondary { background:transparent; color:var(--text); border-color:rgba(255,255,255,0.18); }
+.btn:hover { transform:translateY(-2px); }
+.hero-visual { position:relative; min-height:520px; border-radius:40px; background:linear-gradient(180deg,rgba(17,31,20,0.84),rgba(7,17,12,0.96)), radial-gradient(circle at top left, rgba(212,175,55,0.2), transparent 30%), radial-gradient(circle at bottom right, rgba(29,122,85,0.16), transparent 28%); overflow:hidden; border:1px solid rgba(255,255,255,0.1); box-shadow:var(--shadow); }
+.hero-visual::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 25% 25%, rgba(212,175,55,0.08) 0%, transparent 18%), radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 20%), linear-gradient(135deg, rgba(0,0,0,0.08), transparent 40%, rgba(0,0,0,0.12) 100%); pointer-events:none; }
+.hero-pattern { position:absolute; inset:20px; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.hero-card { position:relative; border-radius:28px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08); padding:24px; color:var(--text); backdrop-filter: blur(12px); box-shadow:0 20px 40px rgba(0,0,0,0.18); overflow:hidden; }
+.hero-card::after { content:''; position:absolute; inset:0; background:radial-gradient(circle at top left, rgba(212,175,55,0.15), transparent 25%); pointer-events:none; }
+.hero-card h4 { margin:0 0 0.9rem; font-size:1.05rem; letter-spacing:0.03em; }
+.hero-card p { margin:0; color:rgba(255,255,255,0.82); line-height:1.75; }
+.hero-art { position:absolute; right:-60px; bottom:-40px; width:260px; height:260px; border-radius:50%; background:linear-gradient(135deg,rgba(212,175,55,0.35),rgba(255,255,255,0.08)); filter:blur(1px); opacity:0.8; }
+.hero-svg { position:absolute; left:24px; top:24px; width:220px; height:220px; }
+.hero-svg svg { width:100%; height:100%; }
+.section { padding:90px 0; }
+.section-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; margin-bottom:2rem; }
+.section-header h2 { margin:0; font-size:2.1rem; letter-spacing:-0.04em; }
+.section-header p { max-width:560px; margin:0; color:var(--muted); line-height:1.8; }
+.stats-grid, .program-grid, .teacher-grid, .news-grid, .event-grid, .gallery-grid, .library-grid { display:grid; gap:1.4rem; }
+.stats-grid { grid-template-columns:repeat(4,1fr); }
+.stat-card { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); padding:1.6rem 1.5rem; border-radius:28px; backdrop-filter:blur(12px); box-shadow:0 20px 45px rgba(0,0,0,0.18); }
+.stat-card span { display:block; color:var(--gold); font-size:1.8rem; font-weight:800; }
+.stat-card p { margin:0.65rem 0 0; color:var(--muted); font-size:0.95rem; }
+.program-grid { grid-template-columns:repeat(3,1fr); }
+.program-card { position:relative; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:32px; padding:2rem; overflow:hidden; transition:transform 0.3s ease, border-color 0.3s ease; }
+.program-card:hover { transform:translateY(-10px); border-color:rgba(212,175,55,0.28); }
+.program-card::before { content:''; position:absolute; top:-30px; right:-30px; width:140px; height:140px; background:radial-gradient(circle, rgba(212,175,55,0.18), transparent 58%); border-radius:50%; }
+.program-icon { width:54px; height:54px; display:grid; place-items:center; border-radius:18px; background:rgba(212,175,55,0.14); margin-bottom:1.4rem; color:var(--gold); }
+.program-card h3 { margin:0 0 0.9rem; font-size:1.15rem; }
+.program-card p { margin:0 0 1.6rem; color:var(--muted); line-height:1.8; }
+.program-card .btn-small { padding:0.9rem 1.3rem; font-size:0.92rem; background:transparent; border:1px solid rgba(255,255,255,0.18); color:var(--text); border-radius:999px; }
+.program-card .btn-small:hover { color:var(--gold); border-color:var(--gold); }
+.teacher-grid { grid-template-columns:repeat(3,1fr); }
+.teacher-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:32px; padding:1.8rem; display:flex; flex-direction:column; gap:1rem; transition:transform 0.3s ease; }
+.teacher-card:hover { transform:translateY(-6px); }
+.teacher-avatar { width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#1d7a55,#d4af37); display:grid; place-items:center; color:#fff; font-size:1.8rem; font-weight:700; border:3px solid rgba(255,255,255,0.16); }
+.teacher-meta { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.teacher-meta h3 { margin:0; font-size:1.05rem; }
+.teacher-meta span { color:var(--gold); font-weight:700; font-size:0.95rem; }
+.teacher-card p { margin:0; color:var(--muted); line-height:1.75; flex:1; }
+.admission-grid { display:grid; grid-template-columns:1.05fr 0.95fr; gap:2rem; align-items:start; }
+.admission-panel { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:32px; padding:2rem; backdrop-filter:blur(14px); box-shadow:0 30px 60px rgba(0,0,0,0.18); }
+.admission-panel h3 { margin:0 0 1rem; font-size:1.65rem; }
+.admission-panel p { color:var(--muted); line-height:1.8; }
+.admission-form { background:rgba(7,17,12,0.84); border:1px solid rgba(255,255,255,0.1); border-radius:32px; padding:2rem; }
+body.light .admission-form { background:rgba(255,255,255,0.96); }
+.form-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+.form-grid .full { grid-column:1/-1; }
+.form-field { display:flex; flex-direction:column; gap:0.55rem; margin-bottom:1rem; }
+.form-field label { color:var(--text); font-size:0.95rem; }
+.form-field input, .form-field textarea, .form-field select { width:100%; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); border-radius:16px; color:var(--text); padding:0.95rem 1rem; }
+body.light .form-field input, body.light .form-field textarea, body.light .form-field select { background:#fff; color:#132116; border-color:#d6d0c4; }
+.form-field textarea { min-height:120px; resize:vertical; }
+.notice { display:none; margin-top:1rem; padding:1rem 1.25rem; border-radius:18px; background:rgba(212,175,55,0.14); color:#fff; border:1px solid rgba(212,175,55,0.32); }
+.news-grid, .event-grid, .gallery-grid, .library-grid { grid-template-columns:repeat(3,1fr); }
+.news-card, .event-card, .gallery-item, .book-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:32px; overflow:hidden; backdrop-filter:blur(12px); box-shadow:0 20px 40px rgba(0,0,0,0.18); transition:transform 0.3s ease; }
+.news-card:hover, .event-card:hover, .gallery-item:hover, .book-card:hover { transform:translateY(-8px); }
+.news-top, .event-top { display:flex; justify-content:space-between; gap:1rem; padding:1.4rem 1.5rem 0; }
+.news-top span, .event-top span { font-size:0.9rem; color:var(--muted); }
+.news-content, .event-content, .book-content { padding:1.4rem 1.5rem 1.6rem; }
+.news-content h3, .event-content h3, .book-content h3 { margin:0 0 0.75rem; font-size:1.15rem; }
+.news-content p, .event-content p, .book-content p { margin:0 0 1.2rem; color:var(--muted); line-height:1.75; }
+.news-actions, .event-actions, .book-actions { display:flex; justify-content:space-between; align-items:center; }
+.news-actions button, .event-actions button, .book-actions button { background:rgba(212,175,55,0.12); border:none; color:var(--text); padding:0.9rem 1.2rem; border-radius:999px; cursor:pointer; transition:background 0.25s ease; }
+.news-actions button:hover, .event-actions button:hover, .book-actions button:hover { background:rgba(212,175,55,0.24); }
+.event-card { position:relative; }
+.event-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg, rgba(212,175,55,0.12), transparent 40%); pointer-events:none; }
+.gallery-controls { display:flex; flex-wrap:wrap; align-items:center; gap:0.75rem; margin-bottom:1.5rem; }
+.gallery-controls button { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:var(--text); padding:0.8rem 1rem; border-radius:999px; cursor:pointer; }
+.gallery-controls button.active { background:var(--gold); color:#10210d; border-color:transparent; }
+.gallery-item { position:relative; min-height:260px; color:#fff; display:grid; align-items:flex-end; padding:1.4rem; background-size:cover; background-position:center; }
+.gallery-item::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,0.55) 100%); }
+.gallery-item span { position:relative; z-index:1; font-size:0.95rem; color:rgba(255,255,255,0.82); margin-bottom:0.4rem; }
+.gallery-item h3 { position:relative; z-index:1; margin:0; font-size:1.35rem; }
+.gallery-lightbox { position:fixed; inset:0; background:rgba(2,7,4,0.9); display:none; align-items:center; justify-content:center; padding:2rem; z-index:150; }
+.gallery-lightbox.active { display:flex; }
+.gallery-lightbox .lightbox-inner { position:relative; max-width:980px; width:100%; max-height:90vh; border-radius:30px; overflow:hidden; background:#06120d; }
+.gallery-lightbox img { width:100%; height:auto; display:block; }
+.gallery-lightbox button { position:absolute; top:1rem; right:1rem; background:rgba(0,0,0,0.45); border:none; color:#fff; width:46px; height:46px; border-radius:50%; cursor:pointer; font-size:1.2rem; }
+.library-search { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between; margin-bottom:1.5rem; }
+.library-search input { width:100%; max-width:420px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:var(--text); padding:0.95rem 1rem; border-radius:999px; }
+.faq { display:grid; gap:1rem; }
+.faq-item { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:26px; overflow:hidden; }
+.faq-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.4rem 1.5rem; cursor:pointer; }
+.faq-header h3 { margin:0; font-size:1rem; }
+.faq-header span { color:var(--gold); font-size:1rem; }
+.faq-body { max-height:0; overflow:hidden; transition:max-height 0.35s ease; padding:0 1.5rem; }
+.faq-body p { margin:0 0 1.2rem; color:var(--muted); line-height:1.75; }
+.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+.contact-card { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:32px; padding:2rem; backdrop-filter:blur(14px); }
+.contact-card h3 { margin-top:0; }
+.contact-list { list-style:none; padding:0; margin:1rem 0 0; display:grid; gap:1rem; }
+.contact-list li { display:flex; align-items:flex-start; gap:0.75rem; color:var(--muted); }
+.contact-list strong { color:var(--text); }
+.map-placeholder { background:linear-gradient(135deg, rgba(29,122,85,0.18), rgba(21,65,43,0.8)), radial-gradient(circle at top left, rgba(212,175,55,0.14), transparent 25%); border:1px solid rgba(255,255,255,0.1); border-radius:32px; min-height:320px; display:flex; align-items:center; justify-content:center; text-align:center; padding:2rem; color:var(--cream); box-shadow:var(--shadow); }
+.map-placeholder span { display:block; max-width:360px; font-size:1rem; line-height:1.8; }
+.social-links { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1rem; }
+.social-links a { display:inline-flex; align-items:center; gap:0.6rem; padding:0.9rem 1.2rem; border-radius:999px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:var(--text); text-decoration:none; }
+.poster-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.8rem; }
+.poster-card { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:32px; overflow:hidden; }
+.poster-preview { position:relative; width:100%; aspect-ratio:16/9; background:#07120f; display:grid; place-items:center; padding:2rem; }
+.poster-preview .poster-inner { position:relative; width:95%; height:95%; border-radius:28px; overflow:hidden; background:linear-gradient(180deg,#0e271a,#092316 70%,#1a4e33); box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06); }
+.poster-preview .poster-inner::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at top left, rgba(212,175,55,0.16), transparent 18%), radial-gradient(circle at bottom right, rgba(255,255,255,0.08), transparent 20%); }
+.poster-inner .poster-title { position:absolute; top:2.2rem; left:2.2rem; right:2.2rem; color:#fff; font-size:2.55rem; letter-spacing:0.05em; line-height:1.02; }
+.poster-inner .poster-subtitle { position:absolute; top:10rem; left:2.2rem; color:rgba(212,175,55,0.95); text-transform:uppercase; letter-spacing:0.35em; font-size:0.95rem; }
+.poster-inner .poster-copy { position:absolute; bottom:3.2rem; left:2.2rem; color:#f3f1e8; font-size:1.05rem; line-height:1.6; max-width:420px; }
+.poster-inner .crescent { position:absolute; right:2.2rem; top:2.2rem; width:120px; height:120px; border:10px solid rgba(212,175,55,0.95); border-radius:50%; box-shadow:0 0 0 12px rgba(212,175,55,0.08); }
+.poster-inner .crescent::after { content:''; position:absolute; inset:14px; background:var(--bg); border-radius:50%; left:24px; }
+.poster-panel { padding:2rem; display:flex; flex-direction:column; gap:1.1rem; justify-content:center; }
+.poster-panel h3 { margin:0; font-size:1.75rem; }
+.poster-panel p { margin:0; color:var(--muted); line-height:1.8; }
+.poster-panel button { width:max-content; }
+.poster-square { position:relative; width:100%; aspect-ratio:1; background:linear-gradient(135deg,#102d1c,#08120c); overflow:hidden; display:grid; place-items:center; }
+.poster-square .square-inner { position:relative; width:84%; height:84%; border-radius:36px; background:linear-gradient(135deg, rgba(212,175,55,0.18), rgba(255,255,255,0.08)); border:1px solid rgba(255,255,255,0.14); padding:1.8rem; display:grid; align-content:space-between; }
+.poster-square h2 { margin:0; font-size:2rem; color:#fff; line-height:1.05; }
+.poster-square p { margin:0; color:rgba(255,255,255,0.88); font-size:1rem; line-height:1.7; }
+.poster-square .tag { display:inline-flex; align-items:center; gap:0.5rem; color:rgba(212,175,55,0.95); text-transform:uppercase; letter-spacing:0.3em; font-size:0.8rem; }
+.poster-download { background:linear-gradient(135deg,var(--gold),#f5c754); color:#10210d; }
+.back-top { position:fixed; right:24px; bottom:24px; width:52px; height:52px; border-radius:50%; border:none; background:rgba(212,175,55,0.95); color:#10210d; display:grid; place-items:center; cursor:pointer; box-shadow:0 20px 40px rgba(0,0,0,0.24); opacity:0; pointer-events:none; transition:opacity 0.25s ease; z-index:120; }
+.back-top.show { opacity:1; pointer-events:auto; }
+.modal { position:fixed; inset:0; background:rgba(3,10,6,0.85); display:none; align-items:center; justify-content:center; padding:2rem; z-index:160; }
+.modal.active { display:flex; }
+.modal-card { background:var(--bg); border:1px solid rgba(255,255,255,0.12); border-radius:30px; width:min(760px,100%); max-height:90vh; overflow:auto; box-shadow:0 40px 80px rgba(0,0,0,0.35); padding:2rem; position:relative; }
+.modal-close { position:absolute; top:1.2rem; right:1.2rem; background:rgba(255,255,255,0.08); border:none; color:var(--text); width:42px; height:42px; border-radius:50%; cursor:pointer; }
+.modal h3 { margin-top:0; }
+.modal p { color:var(--muted); line-height:1.85; }
+.modal .modal-meta { display:flex; flex-wrap:wrap; gap:1rem; margin:1rem 0 1.5rem; color:var(--muted); }
+.modal .modal-meta span { background:rgba(255,255,255,0.06); padding:0.75rem 1rem; border-radius:999px; }
+@media(max-width:1100px) {
+  .hero { grid-template-columns:1fr; min-height:auto; padding-top:120px; }
+  .hero-visual { min-height:420px; }
+  .stats-grid, .program-grid, .teacher-grid, .news-grid, .event-grid, .gallery-grid, .library-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .admission-grid, .contact-grid, .poster-grid { grid-template-columns:1fr; }
+}
+@media(max-width:840px) {
+  .navbar { flex-wrap:wrap; justify-content:center; }
+  .nav-links { order:3; width:100%; justify-content:center; gap:0.85rem; }
+  .controls { order:2; }
+  .menu-toggle { display:inline-flex; }
+  .nav-links { display:none; position:absolute; top:80px; left:50%; transform:translateX(-50%); background:rgba(7,17,12,0.96); border:1px solid rgba(255,255,255,0.1); backdrop-filter:blur(16px); border-radius:24px; padding:1rem 1.2rem; width:calc(100% - 40px); flex-direction:column; align-items:center; }
+  .nav-links.show { display:flex; }
+  .section-header { flex-direction:column; align-items:flex-start; }
+  .hero-title { font-size:2.8rem; }
+}
+@media(max-width:640px) {
+  main { padding-top:90px; }
+  .hero { gap:1.6rem; }
+  .hero-content { text-align:center; }
+  .hero-actions { justify-content:center; }
+  .hero-svg { display:none; }
+  .stats-grid, .program-grid, .teacher-grid, .news-grid, .event-grid, .gallery-grid, .library-grid { grid-template-columns:1fr; }
+  .form-grid { grid-template-columns:1fr; }
+  .hero-card { padding:1.6rem; }
+  .section { padding:60px 0; }
+  .poster-preview, .poster-square { aspect-ratio:auto; }
+  .poster-preview .poster-inner { width:100%; height:100%; }
+}
+</style>
+</head>
+<body class="dark">
+<header>
+  <div class="navbar">
+    <a href="#top" class="brand"><span>☪</span>Зулкарнайн Мадраса</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="#home" class="nav-link active">Башкы</a>
+      <a href="#about" class="nav-link">Биз жөнүндө</a>
+      <a href="#programs" class="nav-link">Программалар</a>
+      <a href="#teachers" class="nav-link">Мугалимдер</a>
+      <a href="#news" class="nav-link">Жаңылыктар</a>
+      <a href="#gallery" class="nav-link">Галерея</a>
+      <a href="#admission" class="nav-link">Кабыл алуу</a>
+      <a href="#faq" class="nav-link">Суроолор</a>
+      <a href="#contact" class="nav-link">Байланыш</a>
+    </nav>
+    <div class="controls">
+      <div class="select-wrap">
+        <select id="languageSelect" aria-label="Select language">
+          <option value="kg">Кыргызча</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="hero-subtitle" data-key="heroSubtitle">Knowledge. Character. Faith.</span>
+      <h1 class="hero-title" data-key="heroTitle">Зулкарнайн Мадраса</h1>
+      <p class="hero-desc" data-key="heroDescription">Zулкарнаим Мадраса unites traditional Islamic values with modern academic excellence. We mentor thoughtful students in Quran recitation, Arabic fluency, ethical leadership and community service.</p>
+      <div class="hero-actions">
+        <a href="#admission" class="btn btn-primary" data-key="applyButton">Apply for Admission</a>
+        <a href="#about" class="btn btn-secondary" data-key="learnButton">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-svg">
+        <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d4af37" stop-opacity="0.8"/>
+              <stop offset="100%" stop-color="#1d7a55" stop-opacity="0.7"/>
+            </linearGradient>
+          </defs>
+          <circle cx="180" cy="180" r="140" fill="url(#g1)" opacity="0.24"/>
+          <path d="M180 40C216 40 246 70 246 106V220C246 256 216 286 180 286C144 286 114 256 114 220V106C114 70 144 40 180 40Z" fill="rgba(255,255,255,0.08)"/>
+          <path d="M180 52C210 52 235 77 235 107V219C235 249 210 274 180 274C150 274 125 249 125 219V107C125 77 150 52 180 52Z" fill="rgba(212,175,55,0.18)"/>
+          <path d="M180 95C201 95 218 112 218 133C218 154 201 171 180 171C159 171 142 154 142 133C142 112 159 95 180 95Z" fill="#fff"/>
+          <path d="M180 137C195 137 208 150 208 165C208 180 195 193 180 193C165 193 152 180 152 165C152 150 165 137 180 137Z" fill="#1d7a55" opacity="0.8"/>
+          <circle cx="180" cy="175" r="16" fill="#d4af37"/>
+          <g opacity="0.65" fill="none" stroke="#fff" stroke-width="3">
+            <path d="M45 320L315 50"/>
+            <path d="M40 70L320 350"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-card" style="top:30px; left:30px;">
+        <h4>Modern Islamic Curriculum</h4>
+        <p>Structured classes in Quran, Arabic, Hadith and leadership create a balanced pathway for young learners.</p>
+      </div>
+      <div class="hero-card" style="top:170px; right:32px;">
+        <h4>Premium Campus Experience</h4>
+        <p>A calm learning environment with premium digital resources, spiritual guidance, and ethical mentorship.</p>
+      </div>
+      <div class="hero-card" style="bottom:36px; left:40px;">
+        <h4>Community & Values</h4>
+        <p>We nurture respectful character, community service and confident faith for the next generation.</p>
+      </div>
+      <div class="hero-art"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-header">
+      <div>
+        <p class="label">About</p>
+        <h2 data-key="aboutTitle">About Zulkarnaim Madrasah</h2>
+      </div>
+      <p data-key="aboutDescription">Zulkarnaim Madrasah is a distinguished center of learning where faith and knowledge grow together. Our programs support spiritual growth, academic achievement and community leadership.</p>
+    </div>
+    <div class="stats-grid">
+      <article class="stat-card">
+        <span class="count" data-target="520">0</span>
+        <p>Students</p>
+      </article>
+      <article class="stat-card">
+        <span class="count" data-target="34">0</span>
+        <p>Teachers</p>
+      </article>
+      <article class="stat-card">
+        <span class="count" data-target="15">0</span>
+        <p>Programs</p>
+      </article>
+      <article class="stat-card">
+        <span class="count" data-target="10">0</span>
+        <p>Years of Experience</p>
+      </article>
+    </div>
+    <div class="program-grid" style="margin-top:2.5rem; grid-template-columns:1fr 1fr;">
+      <article class="program-card">
+        <div class="program-icon">★</div>
+        <h3>Our Mission</h3>
+        <p>To empower students with Islamic wisdom, ethical character and modern knowledge in a welcoming learning community.</p>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">✶</div>
+        <h3>Our Vision</h3>
+        <p>To become a leading Islamic educational institution in Kyrgyzstan that inspires faith, excellence and social responsibility.</p>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">✦</div>
+        <h3>Our Values</h3>
+        <p>Faith, respect, compassion, integrity and academic curiosity are the foundation of every student journey.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="programs">
+    <div class="section-header">
+      <div>
+        <p class="label">Programs</p>
+        <h2 data-key="programsTitle">Educational Programs</h2>
+      </div>
+      <p data-key="programsDescription">A diverse set of premium courses designed for spiritual growth, academic progress and character development.</p>
+    </div>
+    <div class="program-grid">
+      <article class="program-card">
+        <div class="program-icon">☪</div>
+        <h3>Quran Studies</h3>
+        <p>Memorization, recitation and Tafsir lessons adapted for all ages with experienced ustads.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">★</div>
+        <h3>Tajweed</h3>
+        <p>Precise articulation, rhythm and beauty in Quranic recitation through expert tajweed guidance.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">📜</div>
+        <h3>Hadith</h3>
+        <p>Study of prophetic teachings, ethics and authentic narrations to shape moral understanding.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">⚖</div>
+        <h3>Fiqh</h3>
+        <p>A balanced learning path in Islamic law, worship principles and practical guidance.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">☫</div>
+        <h3>Aqeedah</h3>
+        <p>Foundations of belief, spirituality and strong faith for daily life and leadership.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">✍</div>
+        <h3>Arabic Language</h3>
+        <p>Fluency in reading, writing and speaking Arabic for sacred texts and everyday communication.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">⏳</div>
+        <h3>Islamic History</h3>
+        <p>Stories of scholars, heritage and civilization that inspire pride and scholarly curiosity.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">🎓</div>
+        <h3>General Education</h3>
+        <p>Mathematics, science and languages integrated with moral values for a modern academic foundation.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">💻</div>
+        <h3>Computer Literacy</h3>
+        <p>Digital skills and responsible technology use to prepare students for today's world.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+      <article class="program-card">
+        <div class="program-icon">🌱</div>
+        <h3>Ethics & Character</h3>
+        <p>Practical training in leadership, empathy, discipline and respectful community behavior.</p>
+        <a class="btn-small">Learn More</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="teachers">
+    <div class="section-header">
+      <div>
+        <p class="label">Teachers</p>
+        <h2 data-key="teachersTitle">Our Dedicated Teachers</h2>
+      </div>
+      <p data-key="teachersDescription">Experienced scholars and educators guiding every student with faith-based excellence and modern teaching methods.</p>
+    </div>
+    <div class="teacher-grid">
+      <article class="teacher-card">
+        <div class="teacher-avatar">AA</div>
+        <div class="teacher-meta">
+          <h3>Акылбек Абдулазиз</h3><span>Quran Instructor</span>
+        </div>
+        <p>Specialist in Tajweed and Quran memorization with 12 years of teaching experience in Islamic studies.</p>
+      </article>
+      <article class="teacher-card">
+        <div class="teacher-avatar">AA</div>
+        <div class="teacher-meta">
+          <h3>Акылбек Абдулазиз</h3><span>Arabic Teacher</span>
+        </div>
+        <p>Arabic language educator focused on fluency, reading comprehension and modern communication skills.</p>
+      </article>
+      <article class="teacher-card">
+        <div class="teacher-avatar">AA</div>
+        <div class="teacher-meta">
+          <h3>Акылбек Абдулазиз</h3><span>Hadith Scholar</span>
+        </div>
+        <p>Expert in prophetic tradition and Islamic ethics, nurturing strong character and spiritual depth.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="admission">
+    <div class="section-header">
+      <div>
+        <p class="label">Admission</p>
+        <h2 data-key="admissionTitle">Admissions are Open</h2>
+      </div>
+      <p data-key="admissionDescription">Join a modern Islamic school that prepares students for academic success and faithful leadership.</p>
+    </div>
+    <div class="admission-grid">
+      <div class="admission-panel">
+        <h3>Ready to join our family?</h3>
+        <p>Submit your application and our admissions team will guide you through the next steps. We offer supportive enrollment for new students from across Bishkek and Kyrgyzstan.</p>
+      </div>
+      <form class="admission-form" id="admissionForm">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-field">
+            <label for="birth">Date of Birth</label>
+            <input id="birth" type="date" required>
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="+996 ___ ___ ___" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="info@example.kg" required>
+          </div>
+          <div class="form-field full">
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="Bishkek, Kyrgyzstan" required>
+          </div>
+          <div class="form-field">
+            <label for="education">Education</label>
+            <select id="education" required>
+              <option value="">Select level</option>
+              <option>Primary</option>
+              <option>Secondary</option>
+              <option>High School</option>
+              <option>Graduate</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="program">Program</label>
+            <select id="program" required>
+              <option value="">Choose program</option>
+              <option>Quran Studies</option>
+              <option>Arabic Language</option>
+              <option>Fiqh</option>
+              <option>Ethics & Character</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us more about your child or learning goals"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+        <div class="notice" id="formNotice">Your application has been submitted successfully!</div>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="section-header">
+      <div>
+        <p class="label">News</p>
+        <h2 data-key="newsTitle">Latest News</h2>
+      </div>
+      <p data-key="newsDescription">Stay informed with recent announcements, achievements, and campus activities from Zulkarnaim Madrasah.</p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card" data-news='{"date":"2026-09-01","category":"Admission","title":"New semester applications open","text":"Admissions open for the upcoming academic cycle with expanded programs and scholarship opportunities."}'>
+        <div class="news-top"><span>01 Sep 2026</span><span>Admission</span></div>
+        <div class="news-content">
+          <h3>New semester applications open</h3>
+          <p>Enroll now and become part of a dynamic faith-based learning community.</p>
+        </div>
+        <div class="news-actions"><button class="read-more">Read More</button></div>
+      </article>
+      <article class="news-card" data-news='{"date":"2026-08-15","category":"Event","title":"Cultural learning festival","text":"A special campus event celebrating Islamic heritage, student showcases, and academic excellence."}'>
+        <div class="news-top"><span>15 Aug 2026</span><span>Event</span></div>
+        <div class="news-content">
+          <h3>Cultural learning festival</h3>
+          <p>Students present projects, poetry, and community initiatives in a festive learning atmosphere.</p>
+        </div>
+        <div class="news-actions"><button class="read-more">Read More</button></div>
+      </article>
+      <article class="news-card" data-news='{"date":"2026-07-21","category":"Achievement","title":"Teacher training program","text":"Our teachers completed advanced certification in modern pedagogy and Islamic scholarship."}'>
+        <div class="news-top"><span>21 Jul 2026</span><span>Achievement</span></div>
+        <div class="news-content">
+          <h3>Teacher training program</h3>
+          <p>Faculty professional development continues to strengthen classroom learning and mentorship.</p>
+        </div>
+        <div class="news-actions"><button class="read-more">Read More</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="section-header">
+      <div>
+        <p class="label">Events</p>
+        <h2 data-key="eventsTitle">Upcoming Events</h2>
+      </div>
+      <p data-key="eventsDescription">Explore special gatherings, educational celebrations and community activities planned for our students.</p>
+    </div>
+    <div class="event-grid">
+      <article class="event-card">
+        <div class="event-top"><span>12 Oct 2026</span><span>10:00 AM</span></div>
+        <div class="event-content">
+          <h3>Founders Day Ceremony</h3>
+          <p>Celebrate our school legacy with speeches, student recitations and community honors.</p>
+          <div class="event-actions"><span>Location: Main Hall</span></div>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-top"><span>03 Nov 2026</span><span>14:00 PM</span></div>
+        <div class="event-content">
+          <h3>Islamic Leadership Workshop</h3>
+          <p>Interactive sessions focused on character development, public speaking and servant leadership.</p>
+          <div class="event-actions"><span>Location: Learning Center</span></div>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-top"><span>18 Dec 2026</span><span>09:30 AM</span></div>
+        <div class="event-content">
+          <h3>Student Art & Calligraphy Exhibition</h3>
+          <p>Experience a showcase of student creativity inspired by Islamic heritage and modern design.</p>
+          <div class="event-actions"><span>Location: Gallery Hall</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="section-header">
+      <div>
+        <p class="label">Gallery</p>
+        <h2 data-key="galleryTitle">Visual Stories</h2>
+      </div>
+      <p data-key="galleryDescription">A carefully curated gallery of student life, classes, mosque spaces and community moments.</p>
+    </div>
+    <div class="gallery-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="madrasah">Madrasah</button>
+      <button class="filter-btn" data-filter="students">Students</button>
+      <button class="filter-btn" data-filter="classes">Classes</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="mosque">Mosque</button>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-item" data-category="madrasah" style="background:radial-gradient(circle at top left, rgba(212,175,55,0.2), transparent 30%), linear-gradient(135deg,#102a1f,#07100c);">
+        <span>Madrasah</span><h3>Campus Entrance</h3>
+      </article>
+      <article class="gallery-item" data-category="students" style="background:linear-gradient(135deg,#183725,#0c190f);">
+        <span>Students</span><h3>Study Group</h3>
+      </article>
+      <article class="gallery-item" data-category="classes" style="background:radial-gradient(circle at bottom right, rgba(212,175,55,0.18), transparent 40%), #08120f;">
+        <span>Classes</span><h3>Arabic Lesson</h3>
+      </article>
+      <article class="gallery-item" data-category="events" style="background:linear-gradient(135deg,#1d5a40,#062011);">
+        <span>Events</span><h3>Cultural Evening</h3>
+      </article>
+      <article class="gallery-item" data-category="mosque" style="background:radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 35%), linear-gradient(135deg,#08120c,#112b1c);">
+        <span>Mosque</span><h3>Prayer Space</h3>
+      </article>
+      <article class="gallery-item" data-category="students" style="background:linear-gradient(135deg,#0f2518,#09110c);">
+        <span>Students</span><h3>Team Learning</h3>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="library">
+    <div class="section-header">
+      <div>
+        <p class="label">Library</p>
+        <h2 data-key="libraryTitle">Digital Library</h2>
+      </div>
+      <p data-key="libraryDescription">Discover our digital reading collection of Islamic books, language guides and leadership resources.</p>
+    </div>
+    <div class="library-search">
+      <input id="librarySearch" type="search" placeholder="Search books, authors or categories">
+      <button class="btn btn-secondary">Search</button>
+    </div>
+    <div class="library-grid">
+      <article class="book-card" data-title="The Light of Quran" data-author="Dr. A. Rahman" data-category="Quran">
+        <div class="news-top"><span>Quran</span><span>Dr. A. Rahman</span></div>
+        <div class="book-content">
+          <h3>The Light of Quran</h3>
+          <p>A beginner-friendly guide to understanding the meanings and etiquette of Quran reading.</p>
+          <div class="book-actions"><button>Read</button></div>
+        </div>
+      </article>
+      <article class="book-card" data-title="Tajweed Essentials" data-author="S. Kamil" data-category="Tajweed">
+        <div class="news-top"><span>Tajweed</span><span>S. Kamil</span></div>
+        <div class="book-content">
+          <h3>Tajweed Essentials</h3>
+          <p>Visual lessons and practical exercises to improve recitation and pronunciation.</p>
+          <div class="book-actions"><button>Read</button></div>
+        </div>
+      </article>
+      <article class="book-card" data-title="Paths of Faith" data-author="M. Idris" data-category="Aqeedah">
+        <div class="news-top"><span>Aqeedah</span><span>M. Idris</span></div>
+        <div class="book-content">
+          <h3>Paths of Faith</h3>
+          <p>Insightful discussions on belief, spirituality and the foundations of Islamic doctrine.</p>
+          <div class="book-actions"><button>Read</button></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-header">
+      <div>
+        <p class="label">FAQ</p>
+        <h2 data-key="faqTitle">Frequently Asked Questions</h2>
+      </div>
+      <p data-key="faqDescription">Answers to common queries about admission, requirements and campus life.</p>
+    </div>
+    <div class="faq">
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>When does admission start?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Admissions are open year-round for new students. Each intake begins with an orientation and assessment session.</p></div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>Who can apply?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Students of all backgrounds who seek a respectful Islamic education and strong academic support are welcome.</p></div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>How long is the program?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Our programs typically range from one-year cycles to multi-year courses, depending on the chosen study path.</p></div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>Is accommodation available?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Yes, safe and comfortable accommodation support is available for students from outside Bishkek.</p></div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>What documents are required?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Please bring a birth certificate, previous school records, and a parent or guardian identification document.</p></div>
+      </article>
+      <article class="faq-item">
+        <div class="faq-header">
+          <h3>How can I contact the madrasah?</h3><span>+</span>
+        </div>
+        <div class="faq-body"><p>Use the contact details below or submit a message through the online contact section.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-header">
+      <div>
+        <p class="label">Contact</p>
+        <h2 data-key="contactTitle">Get in Touch</h2>
+      </div>
+      <p data-key="contactDescription">Reach out for questions, campus visits or enrollment support. We are here to help every step of the way.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Contact Information</h3>
+        <ul class="contact-list">
+          <li><strong>Phone:</strong> +996 XXX XXX XXX</li>
+          <li><strong>Email:</strong> info@example.kg</li>
+          <li><strong>Address:</strong> Kyrgyzstan, Bishkek</li>
+        </ul>
+        <div class="social-links">
+          <a href="https://wa.me/" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a href="https://t.me/" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="tel:+996XXXXXXXXX">Call</a>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <span>Google Maps-style placeholder showing the Zulkarnaim Madrasah location in Bishkek. Use the contact details to plan your visit.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="posters">
+    <div class="section-header">
+      <div>
+        <p class="label">Creative</p>
+        <h2 data-key="posterTitle">Social Media & Promotional Posters</h2>
+      </div>
+      <p data-key="posterDescription">Branded digital assets created within the website using HTML, CSS and SVG for modern outreach.</p>
+    </div>
+    <div class="poster-grid">
+      <div class="poster-card poster-square">
+        <div class="poster-inner">
+          <span class="tag">ADMISSION IS OPEN</span>
+          <h2>ZULKARNAIM MADRASAH</h2>
+          <p>Knowledge • Character • Faith</p>
+          <div class="crescent"></div>
+        </div>
+      </div>
+      <div class="poster-card poster-preview">
+        <div class="poster-inner">
+          <div class="poster-title">ZULKARNAIM MADRASAH</div>
+          <div class="poster-subtitle">Education for a Better Future</div>
+          <div class="poster-copy">Knowledge. Character. Faith.</div>
+          <div class="crescent"></div>
+        </div>
+      </div>
+      <div class="poster-card poster-panel">
+        <h3>Create your poster</h3>
+        <p>Generate a downloadable promotional poster directly from the website using the built-in canvas rendering tool.</p>
+        <button class="btn poster-download" id="downloadPoster">Download Poster</button>
+      </div>
+    </div>
+  </section>
+</main>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+
+<div class="modal" id="newsModal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close modal">×</button>
+    <div class="modal-meta"><span id="modalDate"></span><span id="modalCategory"></span></div>
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<div class="gallery-lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button id="closeLightbox" aria-label="Close lightbox">×</button>
+    <div id="lightboxContent" style="padding:2rem; color:#fff; max-height:80vh; overflow:auto;">
+      <h3>Gallery Preview</h3>
+      <p>Browse our beautiful campus moments, classes, events, and mosque spaces.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const translations = {
+  kg: {
+    heroSubtitle: "Knowledge. Character. Faith.",
+    heroTitle: "Zulkarnaim Madrasah",
+    heroDescription: "Zulkarnaim Madrasah салттуу исламдык баалуулуктарды заманбап билимдин менен айкалыштырат. Биз студенттерди Куръан, араб тили жана адамгерчилик багытында өстүрөбүз.",
+    applyButton: "Кабыл алуу үчүн өтүнүү",
+    learnButton: "Толугураак",
+    aboutTitle: "Zulkarnaim Madrasah жөнүндө",
+    aboutDescription: "Zulkarnaim мадрасасы билим жана ишенимди бириктирген үзгүлтүксүз өнүгүү борбору.",
+    programsTitle: "Билим берүү программалары",
+    programsDescription: "Руханий өнүгүү, академиялык атаандаштык жана инсандык тарбия үчүн заманбап курстар.",
+    teachersTitle: "Биздин мугалимдер",
+    teachersDescription: "Көп жылдык тажрыйбага ээ устаздар ар бир окуучуну айкын жетекчилик менен колдойт.",
+    admissionTitle: "Кабыл алуу иштетилет",
+    admissionDescription: "Сапаттуу ислам мектепке кошулуңуз жана келечекке даярдануу.",
+    newsTitle: "Соңку жаңылыктар",
+    newsDescription: "Zulkarnaim мадрасасынан акыркы жарыялар жана окуялар.",
+    eventsTitle: "Жакынкы окуялар",
+    eventsDescription: "Студенттер жана коом үчүн пландалган атайын иш-чаралар.",
+    galleryTitle: "Визуалдык окуялар",
+    galleryDescription: "Мадраса, класстар жана коомдук учурлар галереясы.",
+    libraryTitle: "Цифрлык китепкана",
+    libraryDescription: "Исламдык китептер жана лидерлик материалдар.",
+    faqTitle: "Көп берилүүчү суроолор",
+    faqDescription: "Кабыл алуу, талаптар жана кампус жөнүндө жооптор.",
+    contactTitle: "Биз менен байланыш",
+    contactDescription: "Суроолор үчүн биз менен байланышыңыз.",
+    posterTitle: "Социалдык медиa жана жарнама плакаттары",
+    posterDescription: "HTML, CSS жана SVG менен даярдалган бренд активдер.",
+  },
+  ru: {
+    heroSubtitle: "Knowledge. Character. Faith.",
+    heroTitle: "Мадраса Зулкарнаим",
+    heroDescription: "Мадраса Зулкарнаим сочетает исламские ценности с современным образованием. Мы формируем учащихся в Куръане, арабском языке и нравственном воспитании.",
+    applyButton: "Подать заявку",
+    learnButton: "Узнать больше",
+    aboutTitle: "О Мадрасе Зулкарнаим",
+    aboutDescription: "Мадраса Зулкарнаим — центр развития, где вера и знание идут рядом.",
+    programsTitle: "Образовательные программы",
+    programsDescription: "Современные курсы для духовного роста, академического успеха и характера.",
+    teachersTitle: "Наши преподаватели",
+    teachersDescription: "Опытные наставники ведут каждого ученика с исламским подходом и современными методиками.",
+    admissionTitle: "Прием открыт",
+    admissionDescription: "Присоединяйтесь к школе, готовящей к будущему с уважением и знаниями.",
+    newsTitle: "Последние новости",
+    newsDescription: "Актуальные объявления и события из жизни Мадрасы.",
+    eventsTitle: "Предстоящие события",
+    eventsDescription: "Особые встречи и образовательные мероприятия для нашей общины.",
+    galleryTitle: "Фотогалерея",
+    galleryDescription: "Коллекция изображений кампуса, уроков и жизни студентов.",
+    libraryTitle: "Цифровая библиотека",
+    libraryDescription: "Исламские книги, языковые пособия и материалы по лидерству.",
+    faqTitle: "Частые вопросы",
+    faqDescription: "Ответы на вопросы о приеме, документах и жизни в кампусе.",
+    contactTitle: "Свяжитесь с нами",
+    contactDescription: "Свяжитесь для посещения кампуса или поддержки при приеме.",
+    posterTitle: "Постеры для социальных сетей и промо",
+    posterDescription: "Брендированные цифровые материалы, созданные в сайте.",
+  },
+  en: {
+    heroSubtitle: "Knowledge. Character. Faith.",
+    heroTitle: "Zulkarnaim Madrasah",
+    heroDescription: "Zulkarnaim Madrasah blends Islamic values with modern education. We guide students in Quran, Arabic, ethics and leadership.",
+    applyButton: "Apply for Admission",
+    learnButton: "Learn More",
+    aboutTitle: "About Zulkarnaim Madrasah",
+    aboutDescription: "Zulkarnaim Madrasah is a center of learning where knowledge and faith grow together.",
+    programsTitle: "Educational Programs",
+    programsDescription: "Modern courses designed for spiritual growth, academic success and character development.",
+    teachersTitle: "Our Dedicated Teachers",
+    teachersDescription: "Experienced mentors supporting each student with Islamic insight and modern teaching.",
+    admissionTitle: "Admissions are Open",
+    admissionDescription: "Join a school preparing students for a strong and purposeful future.",
+    newsTitle: "Latest News",
+    newsDescription: "Stay informed about announcements and campus activity from Zulkarnaim Madrasah.",
+    eventsTitle: "Upcoming Events",
+    eventsDescription: "Special events and learning experiences planned for our community.",
+    galleryTitle: "Visual Stories",
+    galleryDescription: "A curated collection of campus, classroom and community moments.",
+    libraryTitle: "Digital Library",
+    libraryDescription: "Explore Islamic books, language guides and leadership resources.",
+    faqTitle: "Frequently Asked Questions",
+    faqDescription: "Answers about admissions, requirements and campus life.",
+    contactTitle: "Get in Touch",
+    contactDescription: "Reach out for visits, guidance, or enrollment support.",
+    posterTitle: "Social Media & Promotional Posters",
+    posterDescription: "Branded digital assets created directly within the website.",
+  },
+  ar: {
+    heroSubtitle: "Knowledge. Character. Faith.",
+    heroTitle: "مدرسة الزُّكَرْنَعِيم",
+    heroDescription: "مدرسة الزُّكَرْنَعِيم تجمع بين القيم الإسلامية والتعليم الحديث. نرشد الطلاب في القرآن، العربية، الأخلاق والقيادة.",
+    applyButton: "قدّم طلب الالتحاق",
+    learnButton: "اعرف المزيد",
+    aboutTitle: "عن مدرسة الزُّكَرْنَعِيم",
+    aboutDescription: "مدرسة الزُّكَرْنَعِيم مركز للتعلم حيث تنمو المعرفة والإيمان معاً.",
+    programsTitle: "البرامج التعليمية",
+    programsDescription: "دورات حديثة مصممة للنمو الروحي والنجاح الأكاديمي وتطوير الشخصية.",
+    teachersTitle: "معلمونا المتفانون",
+    teachersDescription: "مرشدون ذوو خبرة يدعمون كل طالب برؤية إسلامية وأساليب تدريس حديثة.",
+    admissionTitle: "التسجيل مفتوح",
+    admissionDescription: "انضم إلى مدرسة تتهيأ الطلاب لمستقبل قوي وهادف.",
+    newsTitle: "آخر الأخبار",
+    newsDescription: "ابقَ على علم بالإعلانات والنشاطات من مدرسة الزُّكَرْنَعِيم.",
+    eventsTitle: "الفعاليات القادمة",
+    eventsDescription: "فعاليات خاصة وتجارب تعليمية مخصصة لمجتمعنا.",
+    galleryTitle: "قصص مرئية",
+    galleryDescription: "مجموعة منتقاة من لحظات الحرم والفصول والمجتمع.",
+    libraryTitle: "المكتبة الرقمية",
+    libraryDescription: "اكتشف كتبًا إسلامية، وأدلة لغوية وموارد قيادية.",
+    faqTitle: "الأسئلة المتكررة",
+    faqDescription: "إجابات حول القبول والمتطلبات والحياة في الحرم.",
+    contactTitle: "تواصل معنا",
+    contactDescription: "تواصل معنا للزيارات أو المساعدة في التسجيل.",
+    posterTitle: "بوسترات التواصل الاجتماعي والترويج",
+    posterDescription: "أصول رقمية ذات علامة تجارية تم إنشاؤها داخل الموقع.",
+  }
+};
+
+const navLinks = document.querySelectorAll('.nav-link');
+const languageSelect = document.getElementById('languageSelect');
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+const counts = document.querySelectorAll('.count');
+const faqHeaders = document.querySelectorAll('.faq-header');
+const newsButtons = document.querySelectorAll('.read-more');
+const newsModal = document.getElementById('newsModal');
+const modalClose = document.getElementById('modalClose');
+const modalTitle = document.getElementById('modalTitle');
+const modalText = document.getElementById('modalText');
+const modalDate = document.getElementById('modalDate');
+const modalCategory = document.getElementById('modalCategory');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxContent = document.getElementById('lightboxContent');
+const closeLightbox = document.getElementById('closeLightbox');
+const librarySearch = document.getElementById('librarySearch');
+const bookCards = document.querySelectorAll('.book-card');
+const admissionForm = document.getElementById('admissionForm');
+const formNotice = document.getElementById('formNotice');
+const backTop = document.getElementById('backTop');
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-links');
+const posterButton = document.getElementById('downloadPoster');
+const translatableElements = document.querySelectorAll('[data-key]');
+const sections = document.querySelectorAll('section[id]');
+
+let activeLang = 'kg';
+let activeTheme = 'dark';
+
+function setLanguage(lang) {
+  activeLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  translatableElements.forEach(el => {
+    const key = el.dataset.key;
+    if (translations[lang][key]) el.textContent = translations[lang][key];
+  });
+  document.documentElement.style.setProperty('--text', lang === 'ar' ? '#f8f6f0' : '');
+}
+languageSelect.addEventListener('change', e => setLanguage(e.target.value));
+setLanguage('kg');
+
+function setTheme(theme) {
+  activeTheme = theme;
+  body.classList.toggle('dark', theme === 'dark');
+  body.classList.toggle('light', theme === 'light');
+  themeToggle.textContent = theme === 'dark' ? '☀' : '🌙';
+}
+themeToggle.addEventListener('click', () => setTheme(activeTheme === 'dark' ? 'light' : 'dark'));
+setTheme('dark');
+
+function animateCounters() {
+  counts.forEach(counter => {
+    const update = () => {
+      const target = +counter.dataset.target;
+      const current = +counter.textContent;
+      const increment = Math.ceil(target / 80);
+      if (current < target) {
+        counter.textContent = current + increment;
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + (target > 10 ? '+' : '');
+      }
+    };
+    update();
+  });
+}
+animateCounters();
+
+faqHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const body = header.nextElementSibling;
+    const open = body.style.maxHeight && body.style.maxHeight !== '0px';
+    faqHeaders.forEach(h => {
+      h.nextElementSibling.style.maxHeight = null;
+      h.querySelector('span').textContent = '+';
+    });
+    if (!open) {
+      body.style.maxHeight = body.scrollHeight + 'px';
+      header.querySelector('span').textContent = '−';
+    }
+  });
+});
+
+newsButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.news-card');
+    const data = JSON.parse(card.dataset.news);
+    modalTitle.textContent = data.title;
+    modalText.textContent = data.text;
+    modalDate.textContent = data.date;
+    modalCategory.textContent = data.category;
+    newsModal.classList.add('active');
+  });
+});
+modalClose.addEventListener('click', () => newsModal.classList.remove('active'));
+newsModal.addEventListener('click', e => { if (e.target === newsModal) newsModal.classList.remove('active'); });
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+    const filter = button.dataset.filter;
+    galleryItems.forEach(item => {
+      item.style.display = filter === 'all' || item.dataset.category === filter ? 'grid' : 'none';
+    });
+  });
+});
+
+galleryItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const category = item.dataset.category;
+    const title = item.querySelector('h3').textContent;
+    lightboxContent.innerHTML = `<h3>${title}</h3><p style="color:#d1c9b8;">Category: ${category}</p><p>Experience the atmosphere of Zulkarnaim Madrasah through our curated visual design cards.</p>`;
+    lightbox.classList.add('active');
+  });
+});
+closeLightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+
+librarySearch.addEventListener('input', () => {
+  const query = librarySearch.value.toLowerCase();
+  bookCards.forEach(card => {
+    const title = card.dataset.title.toLowerCase();
+    const author = card.dataset.author.toLowerCase();
+    const category = card.dataset.category.toLowerCase();
+    const visible = title.includes(query) || author.includes(query) || category.includes(query);
+    card.style.display = visible ? 'grid' : 'none';
+  });
+});
+
+admissionForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const birth = document.getElementById('birth').value;
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const education = document.getElementById('education').value;
+  const program = document.getElementById('program').value;
+  const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const validPhone = /^\+?\d{6,15}$/;
+  if (!name || !birth || !phone || !email || !address || !education || !program) {
+    showFormNotice('Please complete all required fields.', true);
+    return;
+  }
+  if (!validEmail.test(email) || !validPhone.test(phone)) {
+    showFormNotice('Please enter a valid email and phone number.', true);
+    return;
+  }
+  admissionForm.reset();
+  showFormNotice('Your application has been submitted successfully!', false);
+});
+function showFormNotice(message, error) {
+  formNotice.textContent = message;
+  formNotice.style.display = 'block';
+  formNotice.style.background = error ? 'rgba(212,55,55,0.18)' : 'rgba(212,175,55,0.14)';
+  formNotice.style.borderColor = error ? 'rgba(212,55,55,0.35)' : 'rgba(212,175,55,0.32)';
+  setTimeout(() => formNotice.style.display = 'none', 4500);
+}
+
+window.addEventListener('scroll', () => {
+  const scroll = window.scrollY;
+  backTop.classList.toggle('show', scroll > 480);
+  sections.forEach(section => {
+    const top = section.offsetTop - 140;
+    if (scroll >= top && scroll < top + section.offsetHeight) {
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + section.id));
+    }
+  });
+});
+backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+menuToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navMenu.classList.remove('show'));
+});
+
+posterButton.addEventListener('click', () => {
+  const canvas = document.createElement('canvas');
+  canvas.width = 1920;
+  canvas.height = 1080;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#07120c';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const grad = ctx.createLinearGradient(0,0,canvas.width,canvas.height);
+  grad.addColorStop(0,'#1f4e32');
+  grad.addColorStop(1,'#08110d');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = 'rgba(212,175,55,0.16)';
+  ctx.beginPath();
+  ctx.arc(390,240,190,0,Math.PI*2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.arc(1520,760,240,0,Math.PI*2);
+  ctx.fill();
+  ctx.fillStyle = '#f5e9c9';
+  ctx.font = 'bold 124px Inter, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('ZULKARNAIM', canvas.width/2, 360);
+  ctx.font = 'bold 84px Inter, sans-serif';
+  ctx.fillText('MADRASAH', canvas.width/2, 470);
+  ctx.font = '56px Inter, sans-serif';
+  ctx.fillStyle = '#d4af37';
+  ctx.fillText('Education for a Better Future', canvas.width/2, 620);
+  ctx.font = '42px Inter, sans-serif';
+  ctx.fillStyle = '#f0e5c3';
+  ctx.fillText('Knowledge. Character. Faith.', canvas.width/2, 700);
+  ctx.fillStyle = '#d4af37';
+  ctx.beginPath();
+  ctx.arc(1580,280,120,0,Math.PI*2);
+  ctx.strokeStyle = '#d4af37';
+  ctx.lineWidth = 18;
+  ctx.stroke();
+  ctx.fillStyle = '#07120c';
+  ctx.beginPath();
+  ctx.arc(1640,280,90,0,Math.PI*2);
+  ctx.fill();
+  const link = document.createElement('a');
+  link.href = canvas.toDataURL('image/png');
+  link.download = 'zulkarnaim_poster.png';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+});
+</script>
+</body>
+</html>

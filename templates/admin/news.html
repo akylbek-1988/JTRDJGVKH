@@ -1,0 +1,43 @@
+{% extends 'admin/admin_base.html' %}
+{% block admin_content %}
+<h2>News</h2>
+<div class="admin-form-card">
+    <h3>{% if news_item %}Edit news{% else %}Add news{% endif %}</h3>
+    <form method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+        {% if news_item %}<input type="hidden" name="edit_id" value="{{ news_item.id }}" />{% endif %}
+        <label>Title</label>
+        <input type="text" name="title" value="{{ news_item.title if news_item else '' }}" required />
+        <label>Author</label>
+        <input type="text" name="author" value="{{ news_item.author if news_item else '' }}" required />
+        <label>Category</label>
+        <input type="text" name="category" value="{{ news_item.category if news_item else '' }}" required />
+        <label>Excerpt</label>
+        <textarea name="excerpt" rows="3" required>{{ news_item.excerpt if news_item else '' }}</textarea>
+        <label>Content</label>
+        <textarea name="content" rows="6" required>{{ news_item.content if news_item else '' }}</textarea>
+        <label>Date</label>
+        <input type="date" name="date" value="{{ news_item.date if news_item else '' }}" required />
+        <label>Image</label>
+        <input type="file" name="image" accept="image/*" />
+        <button type="submit" class="button button-primary">Save News</button>
+    </form>
+</div>
+<table class="admin-table">
+    <thead><tr><th>ID</th><th>Title</th><th>Category</th><th>Date</th><th>Action</th></tr></thead>
+    <tbody>
+        {% for item in news_list %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.category }}</td>
+            <td>{{ item.date }}</td>
+            <td>
+                <a href="?id={{ item.id }}" class="button button-secondary">Edit</a>
+                <a href="?delete={{ item.id }}" class="button button-secondary">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

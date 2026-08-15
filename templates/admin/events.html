@@ -1,0 +1,41 @@
+{% extends 'admin/admin_base.html' %}
+{% block admin_content %}
+<h2>Events</h2>
+<div class="admin-form-card">
+    <h3>{% if event %}Edit event{% else %}Add event{% endif %}</h3>
+    <form method="POST" enctype="multipart/form-data" novalidate>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+        {% if event %}<input type="hidden" name="edit_id" value="{{ event.id }}" />{% endif %}
+        <label>Title</label>
+        <input type="text" name="title" value="{{ event.title if event else '' }}" required />
+        <label>Date</label>
+        <input type="date" name="date" value="{{ event.date if event else '' }}" required />
+        <label>Time</label>
+        <input type="text" name="time" value="{{ event.time if event else '' }}" required />
+        <label>Location</label>
+        <input type="text" name="location" value="{{ event.location if event else '' }}" required />
+        <label>Description</label>
+        <textarea name="description" rows="4" required>{{ event.description if event else '' }}</textarea>
+        <label>Image</label>
+        <input type="file" name="image" accept="image/*" />
+        <button type="submit" class="button button-primary">Save Event</button>
+    </form>
+</div>
+<table class="admin-table">
+    <thead><tr><th>ID</th><th>Title</th><th>Date</th><th>Location</th><th>Action</th></tr></thead>
+    <tbody>
+        {% for e in events %}
+        <tr>
+            <td>{{ e.id }}</td>
+            <td>{{ e.title }}</td>
+            <td>{{ e.date }}</td>
+            <td>{{ e.location }}</td>
+            <td>
+                <a href="?id={{ e.id }}" class="button button-secondary">Edit</a>
+                <a href="?delete={{ e.id }}" class="button button-secondary">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-section container">
+    <div class="section-header">
+        <span>Contact</span>
+        <h3>Get in touch with Zulkarnaim Madrasah</h3>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    <div class="contact-grid">
+        <div>
+            <h4>Contact details</h4>
+            <p>Reach our admissions and academic support team for any questions.</p>
+            <ul class="contact-list">
+                <li><strong>Phone:</strong> {{ site_info.phone }}</li>
+                <li><strong>Email:</strong> {{ site_info.email }}</li>
+                <li><strong>Address:</strong> {{ site_info.address }}</li>
+            </ul>
+        </div>
+        <form method="POST" novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+            <div class="field-group">
+                <label>Name</label>
+                <input type="text" name="name" required />
+            </div>
+            <div class="field-group">
+                <label>Email</label>
+                <input type="email" name="email" required />
+            </div>
+            <div class="field-group full-width">
+                <label>Message</label>
+                <textarea name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="button button-primary">Send Message</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

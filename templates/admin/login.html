@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="login-section container">
+    <div class="login-card">
+        <h2>Admin Login</h2>
+        <form method="POST" novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+            <label>Username</label>
+            <input type="text" name="username" required />
+            <label>Password</label>
+            <input type="password" name="password" required />
+            <button type="submit" class="button button-primary">Sign In</button>
+        </form>
+    </div>
+</section>
+{% endblock %}
