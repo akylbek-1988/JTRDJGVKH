@@ -21,9 +21,12 @@ SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-development-key-change-me")
 # Development may opt in with DEBUG=True in .env. Never expose Django's debug
 # page when deployment variables have not yet been configured.
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
-ALLOWED_HOSTS = [host.strip() for host in os.getenv(
-    "ALLOWED_HOSTS", "127.0.0.1,localhost,jtrdjgvkh.onrender.com"
-).split(",") if host.strip()]
+default_allowed_hosts = {"127.0.0.1", "localhost", "jtrdjgvkh.onrender.com"}
+configured_allowed_hosts = {
+    host.strip() for host in os.getenv("ALLOWED_HOSTS", "").split(",") if host.strip()
+}
+# Keep the service's Render hostname even if the dashboard variable is empty.
+ALLOWED_HOSTS = sorted(default_allowed_hosts | configured_allowed_hosts)
 CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.getenv(
     "CSRF_TRUSTED_ORIGINS", "https://jtrdjgvkh.onrender.com"
 ).split(",") if origin.strip()]
