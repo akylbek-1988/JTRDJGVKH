@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from urllib.parse import unquote, urlparse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -53,9 +55,21 @@ TEMPLATES = [{
 }]
 WSGI_APPLICATION = "config.wsgi.application"
 
-# PostgreSQL is used when its connection variables are supplied. SQLite keeps local
-# development usable before PostgreSQL has been installed.
-if os.getenv("POSTGRES_DB"):
+# PostgreSQL is used when Render's DATABASE_URL or individual connection variables
+# are supplied. SQLite keeps local development usable before PostgreSQL is installed.
+database_url = os.getenv("DATABASE_URL")
+if database_url:
+    parsed_database_url = urlparse(database_url)
+    DATABASES = {"default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": parsed_database_url.path.lstrip("/"),
+        "USER": unquote(parsed_database_url.username or ""),
+        "PASSWORD": unquote(parsed_database_url.password or ""),
+        "HOST": parsed_database_url.hostname or "127.0.0.1",
+        "PORT": str(parsed_database_url.port or 5432),
+        "CONN_MAX_AGE": 60,
+    }}
+elif os.getenv("POSTGRES_DB"):
     DATABASES = {"default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.environ["POSTGRES_DB"],
@@ -71,7 +85,13 @@ LANGUAGE_CODE = "en-us"
 TIME_ZONE = "Asia/Almaty"
 USE_I18N = True
 USE_TZ = True
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
