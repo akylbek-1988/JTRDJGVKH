@@ -18,8 +18,15 @@ def load_dotenv(path):
 
 load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-development-key-change-me")
-DEBUG = os.getenv("DEBUG", "True").lower() == "true"
-ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")]
+# Development may opt in with DEBUG=True in .env. Never expose Django's debug
+# page when deployment variables have not yet been configured.
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
+ALLOWED_HOSTS = [host.strip() for host in os.getenv(
+    "ALLOWED_HOSTS", "127.0.0.1,localhost,jtrdjgvkh.onrender.com"
+).split(",") if host.strip()]
+CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in os.getenv(
+    "CSRF_TRUSTED_ORIGINS", "https://jtrdjgvkh.onrender.com"
+).split(",") if origin.strip()]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -54,6 +61,7 @@ TEMPLATES = [{
     ]},
 }]
 WSGI_APPLICATION = "config.wsgi.application"
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # PostgreSQL is used when Render's DATABASE_URL or individual connection variables
 # are supplied. SQLite keeps local development usable before PostgreSQL is installed.
